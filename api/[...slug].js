@@ -1,5 +1,6 @@
-import path from 'path';
-import fs from 'fs/promises';
+// Importa os dados diretamente do ficheiro JSON.
+// Isto garante que a Vercel inclua o ficheiro no 'build' da função.
+import data from '../db.json' assert { type: 'json' };
 
 /**
  * Lida com todos os pedidos para /api/*
@@ -18,12 +19,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Constrói o caminho para o ficheiro db.json de forma segura
-    const jsonPath = path.join(process.cwd(), 'db.json');
-    
-    // Lê e analisa o ficheiro JSON
-    const jsonData = await fs.readFile(jsonPath, 'utf-8');
-    const data = JSON.parse(jsonData);
+    // Os dados já foram importados e analisados na linha 'import data from ...'
     
     // Obtém os segmentos do URL do pedido. Ex: /api/promocoes -> ['promocoes']
     const { slug } = req.query;
@@ -55,6 +51,11 @@ export default async function handler(req, res) {
 
   } catch (error) {
     console.error('Erro ao processar o pedido:', error);
-    return res.status(500).json({ error: 'Erro interno do servidor.' });
+    // Adiciona o erro original à resposta para facilitar a depuração
+    return res.status(500).json({ 
+      error: 'Erro interno do servidor.',
+      details: error.message 
+    });
   }
 }
+
