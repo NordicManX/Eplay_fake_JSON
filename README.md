@@ -60,7 +60,7 @@ package.json: Define as configurações do projeto e scripts. A linha "type": "m
 
 api/db.js: Atua como o nosso banco de dados. Exporta um objeto JavaScript com todos os dados dos jogos.
 
-api/[...slug].js: O coração da API. É uma Serverless Function "catch-all" que interceta todos os pedidos para /api/, lê o URL, e devolve os dados correspondentes do db.js.
+api/[...slug].js: O coração da API. É uma Serverless Function "catch-all" que chama todos os pedidos para /api/, lê o URL, e devolve os dados correspondentes do db.js.
 
 # Como Utilizar no Frontend (RTK Query)
 ### Para integrar esta API com a sua aplicação, configure o baseUrl no seu serviço do RTK Query:
