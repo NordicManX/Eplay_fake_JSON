@@ -1,6 +1,6 @@
-// Importa os dados diretamente do ficheiro JSON.
-// Isto garante que a Vercel inclua o ficheiro no 'build' da função.
-import data from '../db.json' assert { type: 'json' };
+// Importa os dados diretamente do módulo JavaScript.
+// Esta é a forma mais robusta de garantir que a Vercel inclua os dados.
+import data from '../db.js';
 
 /**
  * Lida com todos os pedidos para /api/*
@@ -19,7 +19,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Os dados já foram importados e analisados na linha 'import data from ...'
+    // Os dados já foram importados e estão prontos para serem usados
     
     // Obtém os segmentos do URL do pedido. Ex: /api/promocoes -> ['promocoes']
     const { slug } = req.query;
