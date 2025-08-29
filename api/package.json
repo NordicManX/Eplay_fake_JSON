@@ -1,11 +1,12 @@
 {
   "name": "eplay-api-mock",
   "version": "1.0.0",
-  "description": "Um servidor de API de simulação para o projeto e-play usando a Vercel. Feito por NordicManX",
-  "main": "api/[...slug].js",
+  "description": "Um servidor de API de simulação para o projeto e-play usando a Vercel.",
+  "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo 'Build script placeholder'"
   },
   "author": "",
   "license": "ISC"
