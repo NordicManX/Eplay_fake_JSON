@@ -1,8 +1,6 @@
-// Importa os dados do ficheiro db.js que está na mesma pasta.
 import data from './db.js';
 
 export default function handler(req, res) {
-  // Configuração de CORS
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -11,11 +9,9 @@ export default function handler(req, res) {
     return res.status(200).end();
   }
   
-  // A correção está aqui! Em vez de req.query, usamos req.url
+  
   const url = new URL(req.url, `http://${req.headers.host}`);
-  // Isto extrai tudo o que vem depois de /api/
-  // Ex: /api/destaque -> ['destaque']
-  // Ex: /api/jogos/1  -> ['jogos', '1']
+  
   const slug = url.pathname.split('/').filter(Boolean).slice(1);
 
   if (req.method === 'POST' && slug && slug[0] === 'checkout') {
