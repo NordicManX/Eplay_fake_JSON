@@ -13,6 +13,7 @@ const data = [
       cover: 'https://cdn.akamai.steamstatic.com/steam/apps/1139900/header.jpg',
       gallery: [{ type: 'image', url: 'https://cdn.akamai.steamstatic.com/steam/apps/1139900/ss_bf22b43b69238e858551a44c7944f786d1361b7d.1920x1080.jpg' }, { type: 'image', url: 'https://cdn.akamai.steamstatic.com/steam/apps/1139900/ss_c61b3ec325b30a91f46f334a170a49852294e5a5.1920x1080.jpg' }, { type: 'video', url: 'https://www.youtube.com/embed/bzoiG0aL9gQ' }]
     }
+  
   },
   {
     id: 2,
