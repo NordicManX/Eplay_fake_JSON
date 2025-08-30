@@ -1,4 +1,4 @@
-// api/eplay/[...slug].js - CÓDIGO CORRETO PARA ESTA ESTRUTURA
+// api/eplay/[...slug].js - VERSÃO FINAL CORRIGIDA
 
 import data from './db.js'
 
@@ -11,7 +11,7 @@ export default function handler(req, res) {
     return res.status(200).end()
   }
 
-  const slug = req.query.slug || [] // Ex: ['promocoes'] ou ['jogos', '6']
+  const slug = req.query.slug || [] // Ex: ['destaque'] ou ['jogos', '6']
 
   if (req.method === 'POST' && slug.includes('checkout')) {
     const orderId = `fake_order_${new Date().getTime()}`
@@ -19,7 +19,7 @@ export default function handler(req, res) {
   }
 
   try {
-    // --- AJUSTE CRÍTICO AQUI ---
+    // --- AJUSTE FINAL E DEFINITIVO AQUI ---
     // A rota principal (promocoes, jogos, etc.) é o PRIMEIRO item do slug (índice 0)
     const mainRoute = slug[0]
     // O ID, se existir, é o SEGUNDO item do slug (índice 1)
@@ -29,7 +29,6 @@ export default function handler(req, res) {
       return res.status(404).json({ error: 'Nenhum endpoint foi solicitado.' })
     }
 
-    // O resto do código funciona perfeitamente com este ajuste
     switch (mainRoute) {
       case 'destaque': {
         const featuredGame = data[0]
