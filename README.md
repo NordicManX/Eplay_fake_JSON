@@ -6,7 +6,7 @@ Este repositório contém o código para uma API de simulação (mock) criada pa
 
 A API está disponível no seguinte endereço:
 
-**Base URL:** `https://eplay-fake-json.vercel.app/api`
+**Base URL:** `https://eplay-fake-json.vercel.app/api/eplay`
 
 ## Endpoints Disponíveis
 
@@ -14,22 +14,22 @@ A API responde aos seguintes endpoints, baseados no ficheiro `api/db.js`.
 
 ### GET
 
-| Método | Endpoint        | Descrição                              |
-|--------|-----------------|----------------------------------------|
-| GET    | `/destaque`     | Retorna o jogo em destaque.            |
-| GET    | `/promocoes`    | Retorna uma lista de jogos em promoção.|
-| GET    | `/em-breve`     | Retorna uma lista de jogos a serem lançados. |
-| GET    | `/acao`         | Retorna uma lista de jogos de ação.    |
-| GET    | `/esportes`     | Retorna uma lista de jogos de desporto.|
-| GET    | `/simulacao`    | Retorna uma lista de jogos de simulação.|
-| GET    | `/luta`         | Retorna uma lista de jogos de luta.    |
-| GET    | `/rpg`          | Retorna uma lista de jogos de RPG.     |
-| GET    | `/jogos/{id}`   | Retorna os detalhes de um jogo específico. |
+| Método | Endpoint              | Descrição                                    |
+|--------|-----------------------|----------------------------------------------|
+| GET    | `api/eplay/destaque`  | Retorna o jogo em destaque.                  |
+| GET    | `api/eplay/promocoes` | Retorna uma lista de jogos em promoção.      |
+| GET    | `api/eplay/em-breve`  | Retorna uma lista de jogos a serem lançados. |
+| GET    | `api/eplay/acao`      | Retorna uma lista de jogos de ação.          |
+| GET    | `api/eplay/esportes`  | Retorna uma lista de jogos de desporto.      |
+| GET    | `api/eplay/simulacao` | Retorna uma lista de jogos de simulação.     |
+| GET    | `api/eplay/luta`      | Retorna uma lista de jogos de luta.          |
+| GET    | `api/eplay/rpg`       | Retorna uma lista de jogos de RPG.           |
+| GET    | `api/eplay/jogos/{id}`| Retorna os detalhes de um jogo específico.   |
 
 Exemplo de uso com `fetch`:
 
 ```javascript
-fetch('https://eplay-fake-json.vercel.app/api/promocoes')
+fetch('https://eplay-fake-json.vercel.app/api/eplay/promocoes')
   .then(res => res.json())
   .then(data => console.log(data));
 
@@ -43,7 +43,7 @@ POST	/checkout	Simula o processo de compra. Retorna um ID de pedido falso (order
 Exemplo de uso com fetch:
 
 javascript
-fetch('https://eplay-fake-json.vercel.app/api/checkout', {
+fetch('https://eplay-fake-json.vercel.app/api/eplay/checkout', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 const api = createApi({
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://eplay-fake-json.vercel.app/api'
+    baseUrl: 'https://eplay-fake-json.vercel.app/api/eplay'
   }),
   endpoints: (builder) => ({
     // Seus endpoints vêm aqui!
