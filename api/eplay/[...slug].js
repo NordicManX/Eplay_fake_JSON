@@ -1,3 +1,4 @@
+
 import data from './db.js'
 
 export default function handler(req, res) {
@@ -9,19 +10,18 @@ export default function handler(req, res) {
     return res.status(200).end()
   }
 
-  if (req.method === 'POST' && req.url?.includes('/checkout')) {
+  
+  const slug = req.query.slug || [] 
+
+  // Verificamos se a requisição é para o endpoint de checkout
+  if (req.method === 'POST' && slug.includes('checkout')) {
     const orderId = `fake_order_${new Date().getTime()}`
     return res.status(200).json({ orderId })
   }
 
   try {
-
-  
-    const pathOnly = req.url.split('?')[0]
-    const urlParts = pathOnly.split('/').filter((part) => part)
-
-    const mainRoute = urlParts[2]
-    const id = urlParts[3]
+    const mainRoute = slug[1]
+    const id = slug[2]
 
     if (!mainRoute) {
       return res.status(404).json({ error: 'Nenhum endpoint foi solicitado.' })
@@ -88,6 +88,8 @@ export default function handler(req, res) {
     }
   } catch (error) {
     console.error('ERRO NA FUNÇÃO DA API:', error)
-    return res.status(500).json({ error: 'Ocorreu um erro interno no servidor.' })
+    return res
+      .status(500)
+      .json({ error: 'Ocorreu um erro interno no servidor.' })
   }
 }
