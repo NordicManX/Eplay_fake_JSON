@@ -10,12 +10,15 @@ export default function handler(req, res) {
   }
 
   try {
-    const { slug } = req.query;
+    
+    const rawSlug = req.query.slug || req.query['...slug'];
+    
+    const slug = Array.isArray(rawSlug) ? rawSlug : (typeof rawSlug === 'string' ? rawSlug.split('/') : []);
 
-    if (!slug || !Array.isArray(slug) || slug.length === 0) {
+    if (slug.length === 0) {
       return res.status(404).json({
         error: 'Endpoint não foi especificado ou o formato é inválido.',
-        receivedQuery: req.query
+        receivedQuery: req.query 
       });
     }
 
