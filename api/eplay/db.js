@@ -279,6 +279,62 @@ export default {
       "image": "https://cdn.akamai.steamstatic.com/steam/apps/2290180/header.jpg",
       "media": { "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/2290180/header.jpg", "cover": "https://cdn.akamai.steamstatic.com/steam/apps/2290180/header.jpg" },
       "prices": { "old": 249.99, "current": 62.49 }
+    },
+    // --- Em Breve ---
+    {
+      "id": 26,
+      "category": "action",
+      "title": "Black Myth: Wukong",
+      "system": "Windows",
+      "description": "Black Myth: Wukong é um RPG de ação inspirado na mitologia chinesa. A história é baseada em Jornada ao Oeste, um dos Quatro Grandes Romances Clássicos da literatura chinesa.",
+      "infos": ["Em breve", "RPG", "Souls-like"],
+      "image": "https://cdn.akamai.steamstatic.com/steam/apps/1818450/header.jpg",
+      "media": { "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/1818450/header.jpg", "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1818450/header.jpg" },
+      "prices": { "current": 299.90 }
+    },
+    {
+      "id": 27,
+      "category": "action",
+      "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "system": "Windows",
+      "description": "Descubra a Zona de Exclusão de Chornobyl cheia de inimigos perigosos, anomalias mortais e artefatos poderosos.",
+      "infos": ["Em breve", "FPS", "Sobrevivência"],
+      "image": "https://cdn.akamai.steamstatic.com/steam/apps/1643320/header.jpg",
+      "media": { "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/1643320/header.jpg", "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1643320/header.jpg" },
+      "prices": { "current": 249.00 }
+    },
+    {
+      "id": 28,
+      "category": "rpg",
+      "title": "Hades II",
+      "system": "Windows",
+      "description": "Lute além do Submundo usando magia sombria para desafiar o Titã do Tempo nesta sequência fascinante do premiado roguelike.",
+      "infos": ["Acesso Antecipado", "Roguelike", "Ação"],
+      "image": "https://cdn.akamai.steamstatic.com/steam/apps/1145350/header.jpg",
+      "media": { "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/1145350/header.jpg", "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1145350/header.jpg" },
+      "prices": { "current": 99.99 }
+    },
+    {
+      "id": 29,
+      "category": "action",
+      "title": "Assassin's Creed Shadows",
+      "system": "Windows",
+      "description": "Explore o Japão feudal nesta nova saga de Assassin's Creed. Viva as histórias interligadas de Naoe, uma shinobi, e Yasuke, o lendário samurai africano.",
+      "infos": ["Em breve", "Mundo aberto", " furtividade"],
+      "image": "https://cdn.akamai.steamstatic.com/steam/apps/2778260/header.jpg",
+      "media": { "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/2778260/header.jpg", "cover": "https://cdn.akamai.steamstatic.com/steam/apps/2778260/header.jpg" },
+      "prices": { "current": 349.90 }
+    },
+    {
+      "id": 30,
+      "category": "action",
+      "title": "Silent Hill 2",
+      "system": "Windows",
+      "description": "Neste remake do aclamado terror psicológico de 2001, experimente uma aula magistral em terror de sobrevivência com visuais e sons modernos.",
+      "infos": ["Em breve", "Terror", "Remake"],
+      "image": "https://cdn.akamai.steamstatic.com/steam/apps/2124490/header.jpg",
+      "media": { "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/2124490/header.jpg", "cover": "https://cdn.akamai.steamstatic.com/steam/apps/2124490/header.jpg" },
+      "prices": { "current": 349.90 }
     }
   ],
   "destaque": {
@@ -327,7 +383,63 @@ export default {
       "prices": { "old": 249.00, "current": 124.50 }
     }
   ],
-  "em-breve": [],
+  "em-breve": [
+    {
+      "id": 26,
+      "category": "action",
+      "title": "Black Myth: Wukong",
+      "system": "Windows",
+      "description": "Black Myth: Wukong é um RPG de ação inspirado na mitologia chinesa. A história é baseada em Jornada ao Oeste.",
+      "infos": ["Em breve", "RPG", "Souls-like"],
+      "image": "https://cdn.akamai.steamstatic.com/steam/apps/1818450/header.jpg",
+      "media": { "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/1818450/header.jpg", "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1818450/header.jpg" },
+      "prices": { "current": 299.90 }
+    },
+    {
+      "id": 27,
+      "category": "action",
+      "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "system": "Windows",
+      "description": "Descubra a Zona de Exclusão de Chornobyl cheia de inimigos perigosos, anomalias mortais e artefatos poderosos.",
+      "infos": ["Em breve", "FPS", "Sobrevivência"],
+      "image": "https://cdn.akamai.steamstatic.com/steam/apps/1643320/header.jpg",
+      "media": { "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/1643320/header.jpg", "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1643320/header.jpg" },
+      "prices": { "current": 249.00 }
+    },
+    {
+      "id": 28,
+      "category": "rpg",
+      "title": "Hades II",
+      "system": "Windows",
+      "description": "Lute além do Submundo usando magia sombria para desafiar o Titã do Tempo nesta sequência fascinante.",
+      "infos": ["Acesso Antecipado", "Roguelike", "Ação"],
+      "image": "https://cdn.akamai.steamstatic.com/steam/apps/1145350/header.jpg",
+      "media": { "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/1145350/header.jpg", "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1145350/header.jpg" },
+      "prices": { "current": 99.99 }
+    },
+    {
+      "id": 29,
+      "category": "action",
+      "title": "Assassin's Creed Shadows",
+      "system": "Windows",
+      "description": "Explore o Japão feudal nesta nova saga de Assassin's Creed. Viva as histórias interligadas de Naoe e Yasuke.",
+      "infos": ["Em breve", "Mundo aberto", "Furtividade"],
+      "image": "https://cdn.akamai.steamstatic.com/steam/apps/2778260/header.jpg",
+      "media": { "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/2778260/header.jpg", "cover": "https://cdn.akamai.steamstatic.com/steam/apps/2778260/header.jpg" },
+      "prices": { "current": 349.90 }
+    },
+    {
+      "id": 30,
+      "category": "action",
+      "title": "Silent Hill 2",
+      "system": "Windows",
+      "description": "Neste remake do aclamado terror psicológico, experimente uma aula magistral em terror de sobrevivência.",
+      "infos": ["Em breve", "Terror", "Remake"],
+      "image": "https://cdn.akamai.steamstatic.com/steam/apps/2124490/header.jpg",
+      "media": { "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/2124490/header.jpg", "cover": "https://cdn.akamai.steamstatic.com/steam/apps/2124490/header.jpg" },
+      "prices": { "current": 349.90 }
+    }
+  ],
   "acao": [
     {
       "id": 1, "category": "action", "title": "Red Dead Redemption 2", "system": "Windows", "description": "Uma história épica sobre honra e lealdade no alvorecer da era moderna.", "infos": ["Ação", "Mundo aberto", "Western"], "image": "https://cdn.akamai.steamstatic.com/steam/apps/1174180/header.jpg", "media": { "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/1174180/header.jpg", "cover": "https://cdn.akamai.steamstatic.com/steam/apps/1174180/header.jpg" }, "prices": { "old": 299.90, "current": 98.96 }
